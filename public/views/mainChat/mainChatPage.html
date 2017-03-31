@@ -1,0 +1,22 @@
+<!-- TAKES TEMPLATE.HTML PAGE FROM COMPONENT -->
+<div class="component-container">
+
+  <!-- Sidebar shows current user -->
+  <div class="sidebarComponent-container">
+    <sidebar-component current-user="currentUser"></sidebar-component>
+  </div>
+  <div ng-if="!showMainMessageComponent">
+      Welcome {{currentUser.name}}
+      <a ng-click="createChat()">Create New Chat</a>
+  </div>
+  <div ng-if="showMainMessageComponent" class="mainMessageComponent-container">
+    <div class="messageComponent-container">
+      <message-list-component chat="chat" current-user="currentUser" all-messages="allMessages"></message-list-component>
+    </div>
+    <div class="messageFormComponent-container">
+      <message-form-component get-chat-messages="getChatMessages(id)" chat="chat" current-user="currentUser" all-messages="allMessages"></message-form-component>
+    </div>
+  </div>
+  <div class="friendsListComponent-container">
+    <friends-list-component current-user="currentUser" users="users" create-chat="createChat(friendId)" ></friends-list-component></div>
+</div>

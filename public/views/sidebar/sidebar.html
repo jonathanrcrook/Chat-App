@@ -1,0 +1,34 @@
+<div class="sidebar">
+  <header>
+    <h2>Send</h2>
+    <!-- ARROW DOWN IMAGE THAT IS CLICKABLE??? -->
+    <img src="" class="" alt="">
+  </header>
+
+  <div class="sidebar-content">
+    <!-- <div ng-if="!showMainMessageComponent">
+         {{currentUser.name}}
+        <a ng-click="createChat()">Create New Chat</a>
+    </div> -->
+    <h4 class="sidebar-nav-header">Chatrooms</h4>
+    <ul class="sidebar-nav-list">
+      <li class="active">
+        <a href="#">Chats users are in</a>
+      </li>
+      <li ng-repeat="chat in $ctrl.chats"></li>
+    </ul>
+
+    <h4 class="sidebar-nav-header">Welcome</h4>
+  </div>
+
+  <footer>
+    <!-- AVATAR OR IMAGE OF CURRENT USER -->
+    <img src="" class="" alt="">
+    <div class="footer-content">
+      <span class="author">{{ $ctrl.currentUser.name }}</span> <br>
+      <a href="">Logout</a>
+    </div>
+
+    <img src="" class="" alt="">
+  </footer>
+</div>

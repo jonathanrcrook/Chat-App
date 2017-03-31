@@ -1,0 +1,9 @@
+<h4>Chat Id: {{$ctrl.chat.id}} {{$ctrl.chat.timestamp | date: 'short'}}</h4>
+<div class="message-list">
+  <div ng-repeat="message in $ctrl.allMessages track by $index"
+  class="message-item" >
+    <div class="message-container">
+      {{message}}
+    </div>
+  </div>
+</div>
