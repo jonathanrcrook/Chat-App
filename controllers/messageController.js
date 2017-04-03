@@ -6,12 +6,14 @@ module.exports = {
     db.createChat((err, chats) => {
       if(err) { return next(err) }
       const chat = chats[0];
-      db.attachUserToChat([chat.id, req.body.userId], (err, chatUser) => {
+      chat.chat_id = chat.id
+      delete chat.id
+      db.attachUserToChat([chat.chat_id, req.body.userId], (err, chatUser) => {
         if (err) {return next(err)}
         if(!req.body.friendId) {
           return res.status(200).json(chat)
         }
-        db.attachUserToChat([chat.id, req.body.friendId], (err, chatFriendUser) => {
+        db.attachUserToChat([chat.chat_id, req.body.friendId], (err, chatFriendUser) => {
           if (err) {return next(err)}
           return res.status(200).json(chat)
         })
@@ -47,13 +49,13 @@ module.exports = {
     })
   },
 
-  // getChatsByUser: (req, res, next) => {
-  //   db.getChatsByUser(req.params.userId, function(err, chatsByUser) {
-  //     if (err) {
-  //       console.log(err)
-  //       return res.status(500).json(err)
-  //     }
-  //     return res.status(200).json(chatsByUser)
-  //   })
-  // }
+  getChatsByUser: (req, res, next) => {
+    db.getChatsByUser(req.params.userId, function(err, chatsByUser) {
+      if (err) {
+        console.log(err)
+        return res.status(500).json(err)
+      }
+      return res.status(200).json(chatsByUser)
+    })
+  }
 }

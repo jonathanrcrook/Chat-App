@@ -1,6 +1,6 @@
 <div class="sidebar">
   <header>
-    <h2>Send</h2>
+    <h4>SenDBoT</h4>
     <!-- ARROW DOWN IMAGE THAT IS CLICKABLE??? -->
     <img src="" class="" alt="">
   </header>
@@ -10,12 +10,11 @@
          {{currentUser.name}}
         <a ng-click="createChat()">Create New Chat</a>
     </div> -->
-    <h4 class="sidebar-nav-header">Chatrooms</h4>
+    <h4 class="sidebar-nav-header">Chats with Users</h4>
     <ul class="sidebar-nav-list">
-      <li class="active">
-        <a href="#">Chats users are in</a>
+      <li ng-repeat="chat in $ctrl.chats">
+        <a ng-click="$ctrl.selectChat({chatId: chat.chat_id})">{{chat.timestamp | date: 'short'}}</a>
       </li>
-      <li ng-repeat="chat in $ctrl.chats"></li>
     </ul>
 
     <h4 class="sidebar-nav-header">Welcome</h4>

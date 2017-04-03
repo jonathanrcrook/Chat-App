@@ -1,6 +1,8 @@
-SELECT *
-FROM chat
-JOIN messages
-ON chat.id = messages.chat_id
-WHERE chat.id = $1
+SELECT m.id, m.chat_id, m.user_id, m.message, m.timestamp, u.name as sender, u.profile_img
+FROM chat c
+JOIN messages m
+ON c.id = m.chat_id
+JOIN users u
+ON m.user_id = u.id
+WHERE c.id = $1
 ;

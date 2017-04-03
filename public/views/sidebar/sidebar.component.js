@@ -4,7 +4,9 @@ angular.module('chatApp')
 .component('sidebarComponent', {
   templateUrl: './views/sidebar/sidebar.html',
   bindings: {
-    currentUser: '='
+    currentUser: '=',
+    chats: '=',
+    selectChat: '&'
   },
   controller: 'sidebarController'
 })

@@ -3,7 +3,7 @@
 
   <!-- Sidebar shows current user -->
   <div class="sidebarComponent-container">
-    <sidebar-component current-user="currentUser"></sidebar-component>
+    <sidebar-component current-user="currentUser" chats="chats" select-chat="selectChat(chatId)"></sidebar-component>
   </div>
   <div ng-if="!showMainMessageComponent">
       Welcome {{currentUser.name}}
@@ -11,12 +11,13 @@
   </div>
   <div ng-if="showMainMessageComponent" class="mainMessageComponent-container">
     <div class="messageComponent-container">
-      <message-list-component chat="chat" current-user="currentUser" all-messages="allMessages"></message-list-component>
+      <message-list-component chat="currentChat" current-user="currentUser" all-messages="allMessages"></message-list-component>
     </div>
     <div class="messageFormComponent-container">
-      <message-form-component get-chat-messages="getChatMessages(id)" chat="chat" current-user="currentUser" all-messages="allMessages"></message-form-component>
+      <message-form-component get-chat-messages="getChatMessages(id)" chat="currentChat" current-user="currentUser" all-messages="allMessages"></message-form-component>
     </div>
   </div>
   <div class="friendsListComponent-container">
-    <friends-list-component current-user="currentUser" users="users" create-chat="createChat(friendId)" ></friends-list-component></div>
+    <friends-list-component current-user="currentUser" users="users" create-chat="createChat(friendId)" ></friends-list-component>
+  </div>
 </div>

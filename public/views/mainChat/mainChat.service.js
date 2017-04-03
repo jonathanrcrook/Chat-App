@@ -26,7 +26,7 @@ angular.module('chatApp')
     return $http.get('/chats/messages/' + chatId)
   }
 
-  // this.getChatsByUser = function (userId) {
-  //   return $http.get('/chats' + userId)
-  // }
+  this.getChatsByUser = function (userId) {
+    return $http.get('/chats/' + userId)
+  }
 });
