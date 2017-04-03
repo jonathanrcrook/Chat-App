@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 
 const server = require('http').Server(app);
+const io = require('socket.io')(server);
 
 const bodyParser = require('body-parser');
 const session = require('express-session');
@@ -31,7 +32,9 @@ app.use('/users', userRouter);
 app.use('/login', loginRouter);
 app.use('/chats', chatRouter);
 
-
+io.on('connection', socket => {
+  console.log('Socket connected')
+})
 
 server.listen(config.port, () => {
   console.log(`Listening on port: ${config.port}`)
