@@ -2,6 +2,12 @@
 
 angular.module('chatApp')
 .service('mainChatService', function($http) {
+  const socket = io.connect('/');
+
+  this.getSocket = function() {
+    return socket;
+  }
+
   this.getUser = function() {
     return $http.get('/users/me');
   }

@@ -32,9 +32,25 @@ app.use('/users', userRouter);
 app.use('/login', loginRouter);
 app.use('/chats', chatRouter);
 
+// Listening for a connection
 io.on('connection', socket => {
   console.log(`Socket ${socket.id} connected`)
+  io.sockets.emit('newConnection', "Somebody connected")
+
+  // Listening for a new Chat to be created
+  socket.on('newChat', data => {
+    console.log('New Chat: ', data)
+    io.sockets.emit('newChat', 'New Chat created')
+  })
+
+  // Listening for exsisting chats between users
+  socket.on('messageSent', data => {
+    console.log('Message Sent: ', data)
+    io.sockets.emit('getMessages', 'Exsisting Chats found')
+  })
+
 })
+
 
 server.listen(config.port, () => {
   console.log(`Listening on port: ${config.port}`)

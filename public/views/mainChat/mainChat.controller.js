@@ -20,7 +20,8 @@ angular.module("chatApp").controller("mainChatCtrl", function($scope, $interval,
     then(function(response) {
       console.log(response.data)
       $scope.currentChat = response.data
-      $scope.allMessages = []
+      $scope.allMessages = [];
+      socket.emit("newChat", "new Chat created")
     })
   }
 
@@ -61,4 +62,15 @@ angular.module("chatApp").controller("mainChatCtrl", function($scope, $interval,
   //     $scope.getChatMessages($scope.currentChat.chat_id)
   //   }
   // }, 1000)
+
+  const socket = mainChatService.getSocket();
+  socket.on('newConnection', function(message) {
+    console.log(message)
+  })
+  socket.on('newChat', function(message) {
+    console.log("New Chat")
+    if ($scope.currentUser && $scope.currentUser.id) {
+      $scope.getChatsByUser($scope.currentUser.id)
+    }
+  })
 })
