@@ -1,4 +1,7 @@
 angular.module('chatApp', ['ui.router'])
+.run(function($rootScope) {
+  var socket = io.connect('/');
+})
 .config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/')
   $stateProvider

@@ -33,7 +33,7 @@ app.use('/login', loginRouter);
 app.use('/chats', chatRouter);
 
 io.on('connection', socket => {
-  console.log('Socket connected')
+  console.log(`Socket ${socket.id} connected`)
 })
 
 server.listen(config.port, () => {
