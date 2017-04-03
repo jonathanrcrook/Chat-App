@@ -21,7 +21,7 @@ angular.module("chatApp").controller("mainChatCtrl", function($scope, $interval,
       console.log(response.data)
       $scope.currentChat = response.data
       $scope.allMessages = [];
-      socket.emit("newChat", "new Chat created")
+      socket.emit("newChat", $scope.currentChat)
     })
   }
 
@@ -35,6 +35,7 @@ angular.module("chatApp").controller("mainChatCtrl", function($scope, $interval,
     $scope.currentChat = filteredChats[0]
     $scope.allMessages = [];
     $scope.getChatMessages($scope.currentChat.chat_id)
+    socket.emit("joinChat", $scope.currentChat)
   }
 
   // Pulling chat from database. Pulling chatId, message, timestamp and userId

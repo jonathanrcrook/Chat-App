@@ -40,13 +40,19 @@ io.on('connection', socket => {
   // Listening for a new Chat to be created
   socket.on('newChat', data => {
     console.log('New Chat: ', data)
+    socket.join(data.chat_id)
     io.sockets.emit('newChat', 'New Chat created')
   })
 
+  // Listening for joined chat/selected chat on front end
+  socket.on('joinChat', data => {
+    console.log('Joined Chat', data)
+    socket.join(data.chat_id)
+  })
   // Listening for exsisting chats between users
   socket.on('messageSent', data => {
     console.log('Message Sent: ', data)
-    io.sockets.emit('getMessages', 'Exsisting Chats found')
+    io.to(data.chat_id).emit('getMessages', data)
   })
 
 })
