@@ -38,13 +38,13 @@ module.exports = {
   },
 
   getChatMessages: (req, res, next) => {
-    console.log(req.params);
+    console.log("Get Chat Messages, ChatID: ", req.params);
     db.getChatMessages(req.params.id, function(err, messages) {
       if (err) {
         console.log(err)
         return res.status(500).json(err)
       }
-      console.log(messages);
+      console.log("Get Chat Messages, Messages: ", messages);
       return res.status(200).json(messages)
     })
   },

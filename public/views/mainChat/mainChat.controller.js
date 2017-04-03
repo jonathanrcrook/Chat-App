@@ -20,7 +20,8 @@ angular.module("chatApp").controller("mainChatCtrl", function($scope, $interval,
     then(function(response) {
       console.log(response.data)
       $scope.currentChat = response.data
-      $scope.allMessages = []
+      $scope.allMessages = [];
+      socket.emit("newChat", $scope.currentChat)
     })
   }
 
@@ -34,6 +35,7 @@ angular.module("chatApp").controller("mainChatCtrl", function($scope, $interval,
     $scope.currentChat = filteredChats[0]
     $scope.allMessages = [];
     $scope.getChatMessages($scope.currentChat.chat_id)
+    socket.emit("joinChat", $scope.currentChat)
   }
 
   // Pulling chat from database. Pulling chatId, message, timestamp and userId
@@ -56,9 +58,20 @@ angular.module("chatApp").controller("mainChatCtrl", function($scope, $interval,
   }
 
   $scope.getUsers();
-  $interval(function() {
-    if ($scope.currentChat && $scope.currentChat.chat_id) {
-      $scope.getChatMessages($scope.currentChat.chat_id)
+  // $interval(function() {
+  //   if ($scope.currentChat && $scope.currentChat.chat_id) {
+  //     $scope.getChatMessages($scope.currentChat.chat_id)
+  //   }
+  // }, 1000)
+
+  const socket = mainChatService.getSocket();
+  socket.on('newConnection', function(message) {
+    console.log(message)
+  })
+  socket.on('newChat', function(message) {
+    console.log("New Chat")
+    if ($scope.currentUser && $scope.currentUser.id) {
+      $scope.getChatsByUser($scope.currentUser.id)
     }
-  }, 1000)
+  })
 })
