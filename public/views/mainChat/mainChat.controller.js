@@ -56,9 +56,9 @@ angular.module("chatApp").controller("mainChatCtrl", function($scope, $interval,
   }
 
   $scope.getUsers();
-  $interval(function() {
-    if ($scope.currentChat && $scope.currentChat.chat_id) {
-      $scope.getChatMessages($scope.currentChat.chat_id)
-    }
-  }, 1000)
+  // $interval(function() {
+  //   if ($scope.currentChat && $scope.currentChat.chat_id) {
+  //     $scope.getChatMessages($scope.currentChat.chat_id)
+  //   }
+  // }, 1000)
 })

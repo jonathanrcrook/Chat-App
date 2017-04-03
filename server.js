@@ -1,4 +1,8 @@
 const express = require('express');
+const app = express();
+
+const server = require('http').Server(app);
+
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const cors = require('cors');
@@ -9,8 +13,6 @@ const chatRouter = require('./routes/chatRouter');
 const db = require('./db')
 
 const config = require('./config.json');
-
-const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -31,6 +33,6 @@ app.use('/chats', chatRouter);
 
 
 
-app.listen(config.port, () => {
+server.listen(config.port, () => {
   console.log(`Listening on port: ${config.port}`)
 });
