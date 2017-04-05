@@ -5,6 +5,8 @@ html {
 body {
   height: 100vh;
   max-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("images/matrix.jpg") center center no-repeat;
+  background-size: cover;
 }
 
 /*SIDEBAR FOLDER*/
@@ -15,6 +17,8 @@ h2 {
 .sidebar-nav-header {
   padding: 20px 0 0 0;
 }
+
+
 
 
 /*FRIENDSLIST FOLDER*/
@@ -80,9 +84,9 @@ h2 {
 }
 
 .sidebarComponent-container {
-  background: #2c3f4f;
+  background: transparent !important;
   width: 20%;
-  border-color: #2c3f4f;
+  border-color: #272b30;
   border-radius: 5px;
   height: 100%;
   color: white;
@@ -98,6 +102,7 @@ h2 {
   height: calc(100% - 90px);
   overflow-y: scroll;
   overflox-x: hidden;
+  color: white;
 }
 
 .messageFormComponent-container {
@@ -124,7 +129,7 @@ h2 {
 }
 
 .jumbotron {
-  background-color: white;
+  color: white;
 }
 
 .buttons-container {
@@ -135,14 +140,19 @@ h2 {
 
 #signup-btn {
   margin-right: 20px;
+  background: transparent !important;
+  border-color: white;
 }
 
 #login-btn {
   margin-left: 20px;
+  background: transparent !important;
+  border-color: white;
 }
 
 .navbar-custom {
-  background-color: #2c3f4f;
+  background: transparent;
+  background-color: #272b30;
   height: 60px;
   font-family: 'Orbitron', sans-serif;
 }
@@ -150,19 +160,19 @@ h2 {
 .line-1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 75px;
-  /*position: relative;*/
+  position: relative;
   top: 25%;
-  width: 20em;
+  width: 100%;
   margin: auto;
-  /*text-align: center;*/
-  /*white-space: nowrap;*/
+  text-align: center;
+  white-space: nowrap;
   overflow: hidden;
   animation: type 4s steps(60, end);
 }
 
 .intro {
   font-family: 'Orbitron', sans-serif;
-  animation: type2 4s steps(60, end);
+  animation: type2 3s steps(60, end);
   /*position: relative;*/
   top: 25%;
   width: 25em;
@@ -227,6 +237,7 @@ h2 {
 }
 
 .btn-default {
+  background: transparent !important;
   background-color: #337ab7;
   color: white;
   margin-top: 10px;
@@ -248,5 +259,28 @@ h2 {
 .btn-default1 {
   background-color: #337ab7;
   color: white;
+}
 
+
+/*CHAT STARTER */
+
+.chat-starter-container img {
+  width: 50px;
+}
+
+.chat-starter-container {
+  color: white;
+}
+
+
+/*ABOUT PAGE*/
+
+.about-container {
+  margin-top: 50px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.creator {
+  margin-top: 20px;
 }

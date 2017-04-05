@@ -1,31 +1,21 @@
 <div class="sidebar">
   <header>
-    <h4>SenDBoT</h4>
-    <!-- ARROW DOWN IMAGE THAT IS CLICKABLE??? -->
-    <img src="" class="" alt="">
+    <h4>ERGOJON</h4>
   </header>
 
   <div class="sidebar-content">
-    <!-- <div ng-if="!showMainMessageComponent">
-         {{currentUser.name}}
-        <a ng-click="createChat()">Create New Chat</a>
-    </div> -->
-    <h4 class="sidebar-nav-header">Chats with Users</h4>
+    <h4 class="sidebar-nav-header">ChatRooms</h4>
     <ul class="sidebar-nav-list">
       <li ng-repeat="chat in $ctrl.chats">
         <a ng-click="$ctrl.selectChat({chatId: chat.chat_id})">{{chat.timestamp | date: 'short'}}</a>
       </li>
     </ul>
-
-    <h4 class="sidebar-nav-header">Welcome</h4>
   </div>
 
   <footer>
-    <!-- AVATAR OR IMAGE OF CURRENT USER -->
-    <img src="" class="" alt="">
     <div class="footer-content">
       <span class="author">{{ $ctrl.currentUser.name }}</span> <br>
-      <a href="">Logout</a>
+      <a ng-click="$ctrl.logout()">Logout</a>
     </div>
 
     <img src="" class="" alt="">

@@ -1,1 +1,1 @@
-SELECT id, name FROM users; 
+SELECT id, name, profile_img FROM users; 

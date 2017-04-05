@@ -6,8 +6,7 @@
     <sidebar-component current-user="currentUser" chats="chats" select-chat="selectChat(chatId)"></sidebar-component>
   </div>
   <div ng-if="!showMainMessageComponent">
-      Welcome {{currentUser.name}}
-      <a ng-click="createChat()">Create New Chat</a>
+    <chat-starter-component current-user="currentUser" users="users" create-chat="createChat(users)"></chat-starter-component>
   </div>
   <div ng-if="showMainMessageComponent" class="mainMessageComponent-container">
     <div class="messageComponent-container">
@@ -18,6 +17,6 @@
     </div>
   </div>
   <div class="friendsListComponent-container">
-    <friends-list-component current-user="currentUser" users="users" create-chat="createChat(friendId)" ></friends-list-component>
+    <friends-list-component current-user="currentUser" users="users" create-chat="createChat(users)"></friends-list-component>
   </div>
 </div>

@@ -31,6 +31,7 @@ app.use(express.static(__dirname + '/public'))
 app.use('/users', userRouter);
 app.use('/login', loginRouter);
 app.use('/chats', chatRouter);
+app.use('/logout', loginRouter);
 
 // Listening for a connection
 io.on('connection', socket => {

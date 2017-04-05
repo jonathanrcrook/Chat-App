@@ -11,7 +11,7 @@ module.exports = {
 
   logout: (req, res, next) => {
     req.logout();
-    res.redirect('/');
+    res.status(200).json({message: "Logout Succesful"})
   },
 
   read: (req, res, next) => {
