@@ -1,4 +1,4 @@
-/*GLOBAL*/
+                                /*GLOBAL*/
 html {
 }
 
@@ -9,7 +9,10 @@ body {
   background-size: cover;
 }
 
-/*SIDEBAR FOLDER*/
+a {
+  text-decoration: underline;
+}
+                                /*SIDEBAR FOLDER*/
 h2 {
   padding: 0 0 25px 0;
 }
@@ -18,14 +21,12 @@ h2 {
   padding: 20px 0 0 0;
 }
 
+.footer-content::first-letter {
+  text-transform: uppercase;
+}
+                                /*FRIENDSLIST FOLDER*/
 
-
-
-/*FRIENDSLIST FOLDER*/
-
-
-
-/*MESSAGELIST FOLDER*/
+                                /*MESSAGELIST FOLDER*/
 .message-list {
   padding: 10px;
 }
@@ -39,6 +40,7 @@ h2 {
 .message-profile-img img {
   width: auto;
   height: 100%;
+  vertical-align: baseline;
 }
 
 .message-container {
@@ -53,10 +55,13 @@ h2 {
 .message-sender {
   font-size: 1rem;
   font-weight: 200;
+  text-transform: capitalize;
 }
 
-
-/*MESSAGE FOLDER*/
+.message-container::first-letter {
+  text-transform: capitalize;
+}
+                                /*MESSAGE FOLDER*/
 .message-form {
   text-align: center;
 }
@@ -64,13 +69,14 @@ h2 {
 .message-box {
   width: 95%;
   height: 40px;
-  border: 3px solid grey;
+  border: 3px solid white;
   border-radius: 5px;
+  background: transparent !important;
+  color: white;
 }
+                                /*MAIN CHAT FOLDER*/
 
-
-/*MAIN CHAT FOLDER*/
-/*MAIN COMPONENT CONTAINER*/
+                                /*MAIN COMPONENT CONTAINER*/
 .component-container {
   display: flex;
   font-weight: bold;
@@ -95,7 +101,8 @@ h2 {
 
 .friendsListComponent-container {
   width: 20%;
-  color: grey;
+  color: white;
+  text-transform: capitalize;
 }
 
 .messageComponent-container {
@@ -113,11 +120,12 @@ h2 {
   width: 100%;
   height: 100%;
 }
+                                /*MAIN HOME PAGE*/
+@media only screen and (min-width: 990px) {
+  .jumbotron-container {
 
-
-
-
-/*MAIN HOME PAGE*/
+  }
+}
 
 .navbar-brand {
   color: white;
@@ -125,7 +133,7 @@ h2 {
 
 .jumbotron-container {
   text-align: center;
-  margin-top: 75px;
+  margin-top: 150px;
 }
 
 .jumbotron {
@@ -152,7 +160,7 @@ h2 {
 
 .navbar-custom {
   background: transparent;
-  background-color: #272b30;
+  border-color: transparent;
   height: 60px;
   font-family: 'Orbitron', sans-serif;
 }
@@ -167,15 +175,15 @@ h2 {
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  animation: type 4s steps(60, end);
+  animation: type 3s steps(60, end);
 }
 
 .intro {
   font-family: 'Orbitron', sans-serif;
-  animation: type2 3s steps(60, end);
+  animation: type2 4s steps(60, end);
   /*position: relative;*/
   top: 25%;
-  width: 25em;
+  width: 100%;
   margin: auto;
   text-align: center;
   white-space: nowrap;
@@ -188,7 +196,6 @@ h2 {
 
 @keyframes type {
   from{width: 0;}
-  /*to{width: 24em;}*/
 }
 
 @keyframes type2{
@@ -219,21 +226,16 @@ h2 {
   font-size: 16px;
   margin-top: 4px;
 }
-
-
-
-
-/*SIGNUP PAGE*/
-
-.signup-form {
+                                /*SIGNUP PAGE*/
+.signUp-form {
   font-family: 'Orbitron', sans-serif;
-  margin-left: 300px;
-  margin-top: 50px;
+  color: white;
+  margin-top: 100px;
+  height: 73vh;
 }
 
-.form-group {
-  width: 65%;
-  margin-top: 25px;
+.signUp-content {
+  width: 50%;
 }
 
 .btn-default {
@@ -243,13 +245,29 @@ h2 {
   margin-top: 10px;
 }
 
+#inputName1 {
+  background: transparent !important;
+  color: white;
+}
 
+#inputEmail1 {
+  background: transparent !important;
+  color: white;
+}
 
-/*LOGIN PAGE*/
+#inputPassword1 {
+  background: transparent !important;
+  color: white;
+}
+                                /*LOGIN PAGE*/
+.login-form {
+
+}
 
 .inputForm-container {
-  margin: 100px 0 0 300px;
+  margin-top: 150px;
   font-family: 'Orbitron', sans-serif;
+  color: white;
 }
 
 .checkbox {
@@ -257,30 +275,134 @@ h2 {
 }
 
 .btn-default1 {
-  background-color: #337ab7;
+  background: transparent !important;
   color: white;
+  border-color: white;
 }
 
+#inputEmail3 {
+  background: transparent !important;
+  border-color: white;
+  color: white;
+  margin-bottom: 20px;
+}
 
-/*CHAT STARTER */
-
+#inputPassword3 {
+  background: transparent !important;
+  border-color: white;
+  color: white;
+  margin-bottom: 20px;
+}
+                                /*CHAT STARTER */
 .chat-starter-container img {
   width: 50px;
 }
 
 .chat-starter-container {
   color: white;
+  text-transform: capitalize;
 }
 
-
-/*ABOUT PAGE*/
-
+.btn-xs {
+  background: transparent !important;
+  border-color: white;
+}
+                                /*ABOUT PAGE*/
 .about-container {
   margin-top: 50px;
   font-family: 'Orbitron', sans-serif;
   text-align: center;
+  color: white;
 }
 
 .creator {
   margin-top: 20px;
+}
+
+.js {
+font-family: 'Orbitron', sans-serif;
+animation: type2 2s steps(80, end);
+/*position: relative;*/
+top: 25%;
+width: 25em;
+margin: auto;
+text-align: center;
+white-space: nowrap;
+overflow: hidden;
+}
+
+.angular {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 3s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.node {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 4s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.massive {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 5s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.passport {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 6s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.express {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 7s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sql {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 8s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sql span {
+  animation: blink 1s infinite;
 }

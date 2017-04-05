@@ -10,10 +10,10 @@
         {{message.message}}
       </div>
       <div class="message-timestamp">
-        {{message.timestamp}}
+        {{message.timestamp | date: 'short'}}
       </div>
       <div class="message-sender">
-        {{message.sender}}
+        from : {{message.sender}}
       </div>
     </div>
   </div>
