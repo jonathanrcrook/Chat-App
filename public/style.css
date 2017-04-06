@@ -192,12 +192,12 @@ h2 {
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
-  animation: type 2s steps(100, end);
+  animation: type 4s steps(100, end);
 }
 
 .intro {
   font-family: 'Orbitron', sans-serif;
-  animation: type2 3s steps(80, end);
+  animation: type2 3.5s steps(80, end);
   /*position: relative;*/
   top: 25%;
   width: 100%;
