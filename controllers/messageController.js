@@ -10,13 +10,17 @@ module.exports = {
       delete chat.id
       db.attachUserToChat([chat.chat_id, req.body.userId], (err, chatUser) => {
         if (err) {return next(err)}
-        if(!req.body.friendId) {
+        if(!req.body.users) {
           return res.status(200).json(chat)
         }
-        db.attachUserToChat([chat.chat_id, req.body.friendId], (err, chatFriendUser) => {
-          if (err) {return next(err)}
-          return res.status(200).json(chat)
-        })
+        console.log(req.body)
+        for (var user of req.body.users) {
+          console.log(user)
+          db.attachUserToChat([chat.chat_id, user.id], (err, chatFriendUser) => {
+            if (err) {return next(err)}
+          })
+        }
+        return res.status(200).json(chat)
       })
     })
   },

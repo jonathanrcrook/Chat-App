@@ -1,20 +1,19 @@
 <h4>Chat Id: {{$ctrl.chat.chat_id}} {{$ctrl.chat.timestamp | date: 'short'}}</h4>
 <div class="message-list">
-  <div ng-repeat="message in $ctrl.allMessages track by $index"
-  class="message-item {{message.user_id}}" >
-    <div class="message-profile-img">
-      <img ng-src="{{message.profile_img}}" alt="">
+    <div ng-repeat="message in $ctrl.allMessages track by $index" class="message-item {{message.user_id}}">
+        <div class="message-profile-img">
+            <img ng-src="{{message.profile_img}}" alt="">
+        </div>
+        <div class="message-container">
+            <div class="message-text">
+                {{message.message}}
+            </div>
+            <div class="message-timestamp">
+                {{message.timestamp | date: 'short'}}
+            </div>
+            <div class="message-sender">
+                from : {{message.sender}}
+            </div>
+        </div>
     </div>
-    <div class="message-container">
-      <div class="message-text">
-        {{message.message}}
-      </div>
-      <div class="message-timestamp">
-        {{message.timestamp}}
-      </div>
-      <div class="message-sender">
-        {{message.sender}}
-      </div>
-    </div>
-  </div>
 </div>

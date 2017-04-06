@@ -1,8 +1,8 @@
 <div class="friends-container">
-<ul class="friends-list">
-  <h4>Friends List</h4>
-  <li ng-repeat="user in $ctrl.users">
-    <a ng-click="$ctrl.createChat({friendId: user.id})">{{user.name}}</a>
-  </li>
-</ul>
+    <ul class="friends-list">
+        <h4>Users</h4>
+        <li class="users" ng-repeat="user in $ctrl.users">
+            <a ng-click="$ctrl.createChat({users: [user]})">{{user.name}}</a>
+        </li>
+    </ul>
 </div>

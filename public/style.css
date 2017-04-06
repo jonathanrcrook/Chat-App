@@ -1,13 +1,21 @@
 /*GLOBAL*/
+
 html {
 }
 
 body {
   height: 100vh;
   max-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("images/matrix.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: underline;
 }
 
 /*SIDEBAR FOLDER*/
+
 h2 {
   padding: 0 0 25px 0;
 }
@@ -16,12 +24,26 @@ h2 {
   padding: 20px 0 0 0;
 }
 
+.footer-content::first-letter {
+  text-transform: uppercase;
+}
+
+.logoutButton {
+  cursor: pointer; cursor: hand;
+}
+
+.chats {
+  cursor: pointer; cursor: hand;
+}
 
 /*FRIENDSLIST FOLDER*/
 
-
+.users {
+  cursor: pointer; cursor: hand;
+}
 
 /*MESSAGELIST FOLDER*/
+
 .message-list {
   padding: 10px;
 }
@@ -35,6 +57,7 @@ h2 {
 .message-profile-img img {
   width: auto;
   height: 100%;
+  vertical-align: baseline;
 }
 
 .message-container {
@@ -49,10 +72,15 @@ h2 {
 .message-sender {
   font-size: 1rem;
   font-weight: 200;
+  text-transform: capitalize;
 }
 
+.message-container::first-letter {
+  text-transform: capitalize;
+}
 
 /*MESSAGE FOLDER*/
+
 .message-form {
   text-align: center;
 }
@@ -60,13 +88,16 @@ h2 {
 .message-box {
   width: 95%;
   height: 40px;
-  border: 3px solid grey;
+  border: 3px solid white;
   border-radius: 5px;
+  background: transparent !important;
+  color: white;
 }
 
-
 /*MAIN CHAT FOLDER*/
+
 /*MAIN COMPONENT CONTAINER*/
+
 .component-container {
   display: flex;
   font-weight: bold;
@@ -80,9 +111,9 @@ h2 {
 }
 
 .sidebarComponent-container {
-  background: #2c3f4f;
+  background: transparent !important;
   width: 20%;
-  border-color: #2c3f4f;
+  border-color: #272b30;
   border-radius: 5px;
   height: 100%;
   color: white;
@@ -91,13 +122,15 @@ h2 {
 
 .friendsListComponent-container {
   width: 20%;
-  color: grey;
+  color: white;
+  text-transform: capitalize;
 }
 
 .messageComponent-container {
   height: calc(100% - 90px);
   overflow-y: scroll;
   overflox-x: hidden;
+  color: white;
 }
 
 .messageFormComponent-container {
@@ -109,9 +142,6 @@ h2 {
   height: 100%;
 }
 
-
-
-
 /*MAIN HOME PAGE*/
 
 .navbar-brand {
@@ -120,11 +150,11 @@ h2 {
 
 .jumbotron-container {
   text-align: center;
-  margin-top: 75px;
+  margin-top: 150px;
 }
 
 .jumbotron {
-  background-color: white;
+  color: white;
 }
 
 .buttons-container {
@@ -135,14 +165,19 @@ h2 {
 
 #signup-btn {
   margin-right: 20px;
+  background: transparent !important;
+  border-color: white;
 }
 
 #login-btn {
   margin-left: 20px;
+  background: transparent !important;
+  border-color: white;
 }
 
 .navbar-custom {
-  background-color: #2c3f4f;
+  background: transparent;
+  border-color: transparent;
   height: 60px;
   font-family: 'Orbitron', sans-serif;
 }
@@ -150,22 +185,22 @@ h2 {
 .line-1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 75px;
-  /*position: relative;*/
+  position: relative;
   top: 25%;
-  width: 20em;
+  width: 100%;
   margin: auto;
-  /*text-align: center;*/
-  /*white-space: nowrap;*/
+  text-align: center;
+  white-space: nowrap;
   overflow: hidden;
-  animation: type 4s steps(60, end);
+  animation: type 4s steps(100, end);
 }
 
 .intro {
   font-family: 'Orbitron', sans-serif;
-  animation: type2 4s steps(60, end);
+  animation: type2 3.5s steps(80, end);
   /*position: relative;*/
   top: 25%;
-  width: 25em;
+  width: 100%;
   margin: auto;
   text-align: center;
   white-space: nowrap;
@@ -178,7 +213,6 @@ h2 {
 
 @keyframes type {
   from{width: 0;}
-  /*to{width: 24em;}*/
 }
 
 @keyframes type2{
@@ -210,35 +244,51 @@ h2 {
   margin-top: 4px;
 }
 
-
-
-
 /*SIGNUP PAGE*/
 
-.signup-form {
+.signUp-form {
   font-family: 'Orbitron', sans-serif;
-  margin-left: 300px;
-  margin-top: 50px;
+  color: white;
+  margin-top: 100px;
+  height: 73vh;
 }
 
-.form-group {
-  width: 65%;
-  margin-top: 25px;
+.signUp-content {
+  width: 50%;
 }
 
 .btn-default {
-  background-color: #337ab7;
+  background: transparent !important;
   color: white;
   margin-top: 10px;
+  text-decoration: underline;
 }
 
+.btn-default:hover {
+  color: white;
+}
 
+#inputName1 {
+  background: transparent !important;
+  color: white;
+}
+
+#inputEmail1 {
+  background: transparent !important;
+  color: white;
+}
+
+#inputPassword1 {
+  background: transparent !important;
+  color: white;
+}
 
 /*LOGIN PAGE*/
 
 .inputForm-container {
-  margin: 100px 0 0 300px;
+  margin-top: 150px;
   font-family: 'Orbitron', sans-serif;
+  color: white;
 }
 
 .checkbox {
@@ -246,7 +296,141 @@ h2 {
 }
 
 .btn-default1 {
-  background-color: #337ab7;
+  background: transparent !important;
   color: white;
+  border-color: white;
+  text-decoration: underline;
+}
 
+.btn-default1:hover {
+  color: white;
+}
+
+#inputEmail3 {
+  background: transparent !important;
+  border-color: white;
+  color: white;
+  margin-bottom: 20px;
+}
+
+#inputPassword3 {
+  background: transparent !important;
+  border-color: white;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/*CHAT STARTER */
+
+.chat-starter-container img {
+  width: 50px;
+}
+
+.chat-starter-container {
+  color: white;
+  text-transform: capitalize;
+}
+
+.btn-xs {
+  background: transparent !important;
+  border-color: white;
+}
+/*ABOUT PAGE*/
+.about-container {
+  margin-top: 50px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.creator {
+  margin-top: 20px;
+}
+
+.js {
+font-family: 'Orbitron', sans-serif;
+animation: type2 2s steps(80, end);
+/*position: relative;*/
+top: 25%;
+width: 25em;
+margin: auto;
+text-align: center;
+white-space: nowrap;
+overflow: hidden;
+}
+
+.angular {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 3s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.node {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 4s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.massive {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 5s steps(120, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.passport {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 6s steps(120, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.express {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 7.5s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sql {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 9s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sql span {
+  animation: blink 1s infinite;
 }

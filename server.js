@@ -31,8 +31,9 @@ app.use(express.static(__dirname + '/public'))
 app.use('/users', userRouter);
 app.use('/login', loginRouter);
 app.use('/chats', chatRouter);
+app.use('/logout', loginRouter);
 
-// Listening for a connection
+// Listening for a connection with Sockets
 io.on('connection', socket => {
   console.log(`Socket ${socket.id} connected`)
   io.sockets.emit('newConnection', "Somebody connected")
@@ -57,7 +58,7 @@ io.on('connection', socket => {
 
 })
 
-
+// Listening to port
 server.listen(config.port, () => {
   console.log(`Listening on port: ${config.port}`)
 });
