@@ -1,3 +1,2 @@
 angular.module('chatApp')
-.controller('friendsListController', function($state, mainChatService) {
-})
+    .controller('friendsListController', function($state, mainChatService) {})

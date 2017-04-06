@@ -1,15 +1,15 @@
 <div class="chat-starter-container">
-  <h2>Welcome {{$ctrl.currentUser.name}}</h2>
-  <h3>Ready to Start a Chat?</h3>
+    <h2>Welcome {{$ctrl.currentUser.name}}</h2>
+    <h3>Ready to Start a Chat?</h3>
 
-  <div class="add-users" ng-if="$ctrl.usersAdded.length">
-    <div ng-repeat="user in $ctrl.usersAdded">{{user.name}}</div>
-  </div> <br>
-  <div ng-repeat="user in $ctrl.users">
-    <button ng-click="$ctrl.addUserToChat(user)" type="button" class="btn btn-primary btn-xs">Add</button>
-    <img ng-src="{{user.profile_img}}" alt="">
-    <span class="user-name">{{user.name}}</span>
-  </div>
-  <br>
-  <button ng-click="$ctrl.createChat({users: $ctrl.usersAdded})" type="button" class="btn btn-default">Create New Chat</button>
+    <div class="add-users" ng-if="$ctrl.usersAdded.length">
+        <div ng-repeat="user in $ctrl.usersAdded">{{user.name}}</div>
+    </div> <br>
+    <div ng-repeat="user in $ctrl.users">
+        <button ng-click="$ctrl.addUserToChat(user)" type="button" class="btn btn-primary btn-xs">Add</button>
+        <img ng-src="{{user.profile_img}}" alt="">
+        <span class="user-name">{{user.name}}</span>
+    </div>
+    <br>
+    <button ng-click="$ctrl.createChat({users: $ctrl.usersAdded})" type="button" class="btn btn-default">Create New Chat</button>
 </div>

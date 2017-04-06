@@ -1,22 +1,22 @@
 <!-- TAKES TEMPLATE.HTML PAGE FROM COMPONENT -->
 <div class="component-container">
 
-  <!-- Sidebar shows current user -->
-  <div class="sidebarComponent-container">
-    <sidebar-component current-user="currentUser" chats="chats" select-chat="selectChat(chatId)"></sidebar-component>
-  </div>
-  <div ng-if="!showMainMessageComponent">
-    <chat-starter-component current-user="currentUser" users="users" create-chat="createChat(users)"></chat-starter-component>
-  </div>
-  <div ng-if="showMainMessageComponent" class="mainMessageComponent-container">
-    <div class="messageComponent-container">
-      <message-list-component chat="currentChat" current-user="currentUser" all-messages="allMessages"></message-list-component>
+    <!-- Sidebar shows current user -->
+    <div class="sidebarComponent-container">
+        <sidebar-component current-user="currentUser" chats="chats" select-chat="selectChat(chatId)"></sidebar-component>
     </div>
-    <div class="messageFormComponent-container">
-      <message-form-component get-chat-messages="getChatMessages(id)" chat="currentChat" current-user="currentUser" all-messages="allMessages"></message-form-component>
+    <div ng-if="!showMainMessageComponent">
+        <chat-starter-component current-user="currentUser" users="users" create-chat="createChat(users)"></chat-starter-component>
     </div>
-  </div>
-  <div class="friendsListComponent-container">
-    <friends-list-component current-user="currentUser" users="users" create-chat="createChat(users)"></friends-list-component>
-  </div>
+    <div ng-if="showMainMessageComponent" class="mainMessageComponent-container">
+        <div class="messageComponent-container">
+            <message-list-component chat="currentChat" current-user="currentUser" all-messages="allMessages"></message-list-component>
+        </div>
+        <div class="messageFormComponent-container">
+            <message-form-component get-chat-messages="getChatMessages(id)" chat="currentChat" current-user="currentUser" all-messages="allMessages"></message-form-component>
+        </div>
+    </div>
+    <div class="friendsListComponent-container">
+        <friends-list-component current-user="currentUser" users="users" create-chat="createChat(users)"></friends-list-component>
+    </div>
 </div>
