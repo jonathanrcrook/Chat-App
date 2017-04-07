@@ -25,7 +25,8 @@ module.exports = {
             }
             const data = users[0];
             delete data.password // deleting password from user view
-            res.status(200).json(data);
+            // res.status(200).json(data);
+            next()
         });
     },
 

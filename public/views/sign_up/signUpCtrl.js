@@ -4,10 +4,11 @@ angular.module('chatApp')
     signUpService.createUser(user).then(function(result) {
       console.log(result)
       if(result.status === 200) {
-        $state.go('message')
+        $state.go('mainChat')
       }
-    }).catch(function(err) {
-      // console.log(err)
+    })
+    .catch(function(err) {
+       // console.log(err)
       $scope.showErrorMessage = true;
     })
   }

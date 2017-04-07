@@ -26,3 +26,5 @@ angular.module('chatApp', ['ui.router'])
       templateUrl: './views/about/about.html'
     })
 })
+.controller('navCtrl', function($scope){
+})

@@ -1,5 +1,73 @@
 /*GLOBAL*/
 
+@media all and (max-width: 550px) {
+  .friends-container ul {
+    margin-right: 15px;
+  }
+}
+
+@media all and (max-width: 550px) {
+  .sidebar-content h4 {
+    font-size: 15px;
+  }
+}
+
+
+@media all and (max-width: 500px) {
+  .sidebar-nav-header h4 {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .sidebar {
+    font-size: 10px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .footer-content {
+    font-size: 10px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .friendsListComponent-container {
+    width: 22%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .chat-starter-container h2 {
+    font-size: 15px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .chat-starter-container h3 {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .navbar-header {
+
+  }
+}
+
+@media all and (max-width: 500px) {
+  .jumbotron h1 {
+    font-size: 50px;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .jumbotron p {
+    font-size: 15px;
+  }
+}
+
+
 html {
 }
 
@@ -121,7 +189,7 @@ h2 {
 }
 
 .friendsListComponent-container {
-  width: 20%;
+  width: 25%;
   color: white;
   text-transform: capitalize;
 }
@@ -457,4 +525,20 @@ overflow: hidden;
 
 .sql span {
   animation: blink 1s infinite;
+}
+
+.expand{
+  margin-top: 100px;
+  animation: margin-shift;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes margin-shift {
+  0% {
+    margin-top: 0
+  }
+  100% {
+    margin-top: 100px;
+  }
 }
