@@ -1,19 +1,19 @@
 // MAIN CONTROLLER FOR ALL THINGS CHAT
 
-// Getting current user and shows in the view
+// Grabs current user from mainChatService and showing current user
 angular.module("chatApp").controller("mainChatCtrl", function($scope, $interval, mainChatService) {
   mainChatService.getUser().then(function(response) {
     $scope.currentUser = response.data;
     $scope.getChatsByUser($scope.currentUser.id)
   })
 
-  // Gets users and shows users in the view
+  // Grabs users and shows users in the view
   $scope.getUsers = function() {
     mainChatService.getUsers().then(function(response) {
       $scope.users = response.data
     })
   }
-  // Creates a new chat
+  // Grabs new created chat and sends to mainChatService to backend
   $scope.createChat = function(users) {
     $scope.showMainMessageComponent = true;
     mainChatService.createChat($scope.currentUser.id, users).

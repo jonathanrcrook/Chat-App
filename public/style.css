@@ -197,7 +197,7 @@ h2 {
 
 .intro {
   font-family: 'Orbitron', sans-serif;
-  animation: type2 3.5s steps(80, end);
+  animation: type2 4s steps(80, end);
   /*position: relative;*/
   top: 25%;
   width: 100%;
@@ -347,7 +347,7 @@ h2 {
   margin-top: 20px;
 }
 
-.js {
+.bootstrap {
 font-family: 'Orbitron', sans-serif;
 animation: type2 2s steps(80, end);
 /*position: relative;*/
@@ -359,19 +359,19 @@ white-space: nowrap;
 overflow: hidden;
 }
 
-.angular {
-  font-family: 'Orbitron', sans-serif;
-  animation: type2 3s steps(80, end);
-  /*position: relative;*/
-  top: 25%;
-  width: 25em;
-  margin: auto;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
+.js {
+font-family: 'Orbitron', sans-serif;
+animation: type2 3s steps(80, end);
+/*position: relative;*/
+top: 25%;
+width: 25em;
+margin: auto;
+text-align: center;
+white-space: nowrap;
+overflow: hidden;
 }
 
-.node {
+.angular {
   font-family: 'Orbitron', sans-serif;
   animation: type2 4s steps(80, end);
   /*position: relative;*/
@@ -383,9 +383,33 @@ overflow: hidden;
   overflow: hidden;
 }
 
+.sockets {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 5s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.node {
+  font-family: 'Orbitron', sans-serif;
+  animation: type2 6s steps(80, end);
+  /*position: relative;*/
+  top: 25%;
+  width: 25em;
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .massive {
   font-family: 'Orbitron', sans-serif;
-  animation: type2 5s steps(120, end);
+  animation: type2 7s steps(120, end);
   /*position: relative;*/
   top: 25%;
   width: 25em;
@@ -397,7 +421,7 @@ overflow: hidden;
 
 .passport {
   font-family: 'Orbitron', sans-serif;
-  animation: type2 6s steps(120, end);
+  animation: type2 8s steps(120, end);
   /*position: relative;*/
   top: 25%;
   width: 25em;
@@ -409,7 +433,7 @@ overflow: hidden;
 
 .express {
   font-family: 'Orbitron', sans-serif;
-  animation: type2 7.5s steps(80, end);
+  animation: type2 9s steps(80, end);
   /*position: relative;*/
   top: 25%;
   width: 25em;
@@ -421,7 +445,7 @@ overflow: hidden;
 
 .sql {
   font-family: 'Orbitron', sans-serif;
-  animation: type2 9s steps(80, end);
+  animation: type2 10s steps(80, end);
   /*position: relative;*/
   top: 25%;
   width: 25em;
